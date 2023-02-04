@@ -76,13 +76,7 @@ from sentry.grouping.api import (
     load_grouping_config,
 )
 from sentry.grouping.result import CalculatedHashes
-from sentry.grouptype.grouptype import (
-    DEFAULT_GROUPHASH_IGNORE_LIMIT,
-    GroupType,
-    PerformanceConsecutiveDBQueriesGroupType,
-    PerformanceNPlusOneGroupType,
-    PerformanceSlowDBQueryGroupType,
-)
+from sentry.grouptype.grouptype import GroupType
 from sentry.ingest.inbound_filters import FilterStatKeys
 from sentry.killswitches import killswitch_matches_context
 from sentry.lang.native.utils import STORE_CRASH_REPORTS_ALL, convert_crashreport_count
@@ -164,16 +158,10 @@ issue_rate_limiter = RedisSlidingWindowRateLimiter(
 PERFORMANCE_ISSUE_QUOTA = Quota(3600, 60, 5)
 
 GROUPHASH_IGNORE_LIMIT_MAP = {
-<<<<<<< HEAD
-    GroupType.PERFORMANCE_N_PLUS_ONE_DB_QUERIES: 3,
-    GroupType.PERFORMANCE_SLOW_DB_QUERY: 100,
-    GroupType.PERFORMANCE_CONSECUTIVE_DB_QUERIES: 15,
-    GroupType.PERFORMANCE_UNCOMPRESSED_ASSETS: 10,
-=======
     PerformanceNPlusOneGroupType: PerformanceNPlusOneGroupType.ignore_limit,
     PerformanceSlowDBQueryGroupType: PerformanceSlowDBQueryGroupType.ignore_limit,
     PerformanceConsecutiveDBQueriesGroupType: PerformanceConsecutiveDBQueriesGroupType.ignore_limit,
->>>>>>> 74fafb418e (Replace usages of grouptype enums with grouptype dataclass)
+    PerformanceUncompressedAssetsGroupType: PerformanceUncompressedAssetsGroupType.ignore_limit,
 }
 
 
@@ -2434,11 +2422,11 @@ def should_create_group(client: Any, grouphash: str, type: GroupType) -> bool:
         sample_rate=1.0,
     )
 
-    if times_seen >= GROUPHASH_IGNORE_LIMIT_MAP.get(type, DEFAULT_GROUPHASH_IGNORE_LIMIT):
+    if times_seen >= type.ignore_limit:
         client.delete(grouphash)
         metrics.incr(
             "performance.performance_issue.issue_will_be_created",
-            tags={"group_type": type.name},
+            tags={"group_type": type.slug},
             sample_rate=1.0,
         )
 
