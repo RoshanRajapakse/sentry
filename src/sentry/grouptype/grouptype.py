@@ -14,7 +14,7 @@ class GroupType:
     slug: str
     description: str
     category: int
-    ignore_limit: int = 3 
+    ignore_limit: int = 3
 
     def __init_subclass__(cls, **kwargs):
         super().__init_subclass__(**kwargs)
