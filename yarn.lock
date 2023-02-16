@@ -2247,7 +2247,7 @@
     "@react-types/shared" "^3.16.0"
     "@swc/helpers" "^0.4.14"
 
-"@react-stately/menu@^3.2.3", "@react-stately/menu@^3.4.2":
+"@react-stately/menu@^3.2.3":
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/@react-stately/menu/-/menu-3.4.2.tgz#5bb6847c9bf4a6140d561114b5f8709a4df12a51"
   integrity sha512-vFC8EloVEcqf6sgiP6ABIkC41ytjoJiGtj7Ws5OS7PvZNyxxDgJr4V0O3Pxd1T0AjlHCloBbojnvoTRwZiSr/A==
@@ -2257,6 +2257,17 @@
     "@react-stately/utils" "^3.5.1"
     "@react-types/menu" "^3.7.2"
     "@react-types/shared" "^3.15.0"
+
+"@react-stately/menu@^3.4.4":
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/@react-stately/menu/-/menu-3.4.4.tgz#222ffd283691f1c4137a85ff0484b98a4385b099"
+  integrity sha512-WKak1NSV9yDY0tDB4mzsbj0FboTtR06gekio0VmKb1+FmnrC07mef8eGKUn974F0WhTNUy5A1iI5eM0W2YNynA==
+  dependencies:
+    "@react-stately/overlays" "^3.4.4"
+    "@react-stately/utils" "^3.5.2"
+    "@react-types/menu" "^3.7.3"
+    "@react-types/shared" "^3.16.0"
+    "@swc/helpers" "^0.4.14"
 
 "@react-stately/numberfield@^3.0.2":
   version "3.3.0"
@@ -2277,6 +2288,15 @@
     "@babel/runtime" "^7.6.2"
     "@react-stately/utils" "^3.5.1"
     "@react-types/overlays" "^3.6.4"
+
+"@react-stately/overlays@^3.4.4":
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/@react-stately/overlays/-/overlays-3.4.4.tgz#a228a230f46f0d593ffb7bc8f836439bbc08e9ed"
+  integrity sha512-IIlx+VXtXS4snDXrocUOls8QZ5XBQ4SNonaz1ox8/5W7Nsvq4VtdKsIaXsUP4agOudswaimlpj3pTDO/KuF5tQ==
+  dependencies:
+    "@react-stately/utils" "^3.5.2"
+    "@react-types/overlays" "^3.6.5"
+    "@swc/helpers" "^0.4.14"
 
 "@react-stately/radio@^3.6.1", "@react-stately/radio@^3.6.2":
   version "3.6.2"
@@ -2372,6 +2392,14 @@
     "@react-types/overlays" "^3.6.4"
     "@react-types/shared" "^3.15.0"
 
+"@react-types/menu@^3.7.3":
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/@react-types/menu/-/menu-3.7.3.tgz#beb8d0fb7f1e50254e2e7661dfbfa4bb38826dad"
+  integrity sha512-3Pax24I/FyNKBjKyNR4ePD8eZs35Th57HzJAVjamQg2fHEDRomg9GQ7fdmfGj72Dv3x3JRCoPYqhJ3L5R3kbzg==
+  dependencies:
+    "@react-types/overlays" "^3.6.5"
+    "@react-types/shared" "^3.16.0"
+
 "@react-types/numberfield@^3.1.0", "@react-types/numberfield@^3.3.5":
   version "3.3.5"
   resolved "https://registry.yarnpkg.com/@react-types/numberfield/-/numberfield-3.3.5.tgz#423aced559f7431e88b7988bf7e2cb3870fcdb1c"
@@ -2385,6 +2413,13 @@
   integrity sha512-REC4IyDUHS5WhwxMxcvTo+LdrvlSYpJKjyYkPFtJoDBpM3gmXfakTY3KW6K5eZkFv3TnmXjDF9Q2yboEk2u6WQ==
   dependencies:
     "@react-types/shared" "^3.15.0"
+
+"@react-types/overlays@^3.6.5":
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/@react-types/overlays/-/overlays-3.6.5.tgz#466b325d9be51f67beb98b7bec3fd9295c72efac"
+  integrity sha512-IeWcF+YTucCYYHagNh8fZLH6R4YUONO1VHY57WJyIHwMy0qgEaKSQCwq72VO1fQJ0ySZgOgm31FniOyKkg6+eQ==
+  dependencies:
+    "@react-types/shared" "^3.16.0"
 
 "@react-types/radio@^3.3.1":
   version "3.3.1"
