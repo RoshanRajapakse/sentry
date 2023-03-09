@@ -22,7 +22,7 @@ cffi==1.15.1
 chardet==4.0.0
 click==8.0.4
 confluent-kafka==1.9.2
-croniter==0.3.37
+croniter==1.0.5
 cryptography==38.0.3
 cssselect==1.0.3
 cssutils==2.4.0
