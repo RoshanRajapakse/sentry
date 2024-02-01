@@ -27,7 +27,7 @@ click==8.0.4
 confluent-kafka==1.9.2
 coverage==6.3.3
 croniter==0.3.37
-cryptography==38.0.3
+cryptography==42.0.2
 cssselect==1.0.3
 cssutils==2.4.0
 datadog==0.29.3
@@ -103,7 +103,7 @@ pep517==0.12.0
 petname==2.6
 phabricator==0.7.0
 phonenumberslite==8.12.0
-pillow==9.2.0
+pillow==10.2.0
 pip-tools==6.7.0
 planout==0.6.0
 platformdirs==2.5.2
