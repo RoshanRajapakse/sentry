@@ -15,7 +15,7 @@ responses>=0.21.0
 
 # pre-commit dependencies
 pre-commit>=2.18.1
-black>=22.10.0
+black>=24.3.0
 flake8>=6
 flake8-bugbear>=22.10
 pyupgrade>=3.2.3
@@ -40,3 +40,7 @@ types-pyyaml
 types-redis
 types-requests
 types-simplejson>=3.17.7.2
+requests>=2.32.2 # not directly required, pinned by Snyk to avoid a vulnerability
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
+urllib3>=2.2.2 # not directly required, pinned by Snyk to avoid a vulnerability
+wheel>=0.38.0 # not directly required, pinned by Snyk to avoid a vulnerability
