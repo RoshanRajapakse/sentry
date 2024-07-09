@@ -203,3 +203,4 @@ zstandard==0.18.0
 # The following packages are considered to be unsafe in a requirements file:
 pip==22.1.2
 setuptools==56.0.0
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
