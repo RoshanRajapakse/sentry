@@ -66,7 +66,7 @@ toronado>=0.1.0
 typing-extensions>=3.10.0.2
 ua-parser>=0.10.0
 unidiff>=0.7.4
-urllib3[brotli]>=1.26.9
+urllib3>=2.5.0
 brotli>=1.0.9
 # See if we can remove LDFLAGS from lib.sh
 # https://github.com/getsentry/sentry/pull/30094
@@ -102,3 +102,4 @@ phabricator>=0.7.0
 # sentry.utils.pytest and sentry.testutils are moved to tests/
 selenium>=4.1.5
 sqlparse>=0.2.4,<=0.3.0
+protobuf>=4.25.8 # not directly required, pinned by Snyk to avoid a vulnerability
